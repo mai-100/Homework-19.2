@@ -1,0 +1,546 @@
+/* //Common Css Start */
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+:root{
+    --nav_bg: #131e29;
+    --font_col: #fff;
+    --after_hover: #4bcafd;
+    --shadow: #277697;
+    --about_bg: #f9f9f9;
+    --gal_overlay: #414042;
+    --footer_bg: #414042;
+    --border_col1: #5c7488;
+    --border_col2: #efefef;
+    --border_col3: #e7e7e7;
+    --f1_weight: 300;
+    --f2_weight: 400;
+    --f3_weight: 700;
+    --trans_com: all .3s linear;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+a{
+    text-decoration: none; 
+ }
+ ul{
+     list-style-type: none;
+ }
+ .text_center{
+     text-align: center;
+ }
+ #pre-loader{
+    position: fixed;
+    background-color: var(--nav_bg);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#pre-loader .shape,
+#pre-loader .shape_a,
+#pre-loader .shape_b{
+    width: 250px;
+    height: 250px;
+    border: 5px groove #4bcafd;
+    border-radius: 25%;
+    animation: preloader 1s linear infinite;
+}
+@keyframes preloader {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* //Common Css End */
+
+/* //Navigation Css Start// */
+nav{
+    background-color: var(--nav_bg);
+    border-bottom: 1px solid var(--border_col1);
+}
+nav .logo{
+    width: 20%;
+}
+nav .logo img{
+    display: block;
+}
+nav .menu{
+    width: 80%;
+}
+nav .menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 40px 13px;
+}
+nav .menu ul li a{
+    margin: 0 13px;
+    display: inline-block;
+    font-size: 13px;
+    line-height: auto;
+    font-weight: var(--f3_weight);
+    color: var(--font_col);
+    text-transform: uppercase;
+    transition: var(--trans_com);
+}
+nav .menu ul li:hover a{
+    color: var(--after_hover);
+}
+/* //Navigation Css End// */
+
+/* //Banner CSS Start// */
+#banner{
+    height: 699px;
+    background: url(../img/Banner-image.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-top: 249px;
+    padding-bottom: 115px;
+    border-bottom: 4px solid var(--after_hover);
+}
+#banner .container,
+#banner .container .row{
+    height: 100%;
+}
+#banner .container .banner_property{
+    width: 45%;
+}
+#banner .container .banner_property img{
+    position: absolute;
+    left: 0;
+    bottom: 0;;
+}
+#banner .container .banner_content{
+    width: 55%;
+}
+#banner .banner_content h1{
+    padding-bottom: 12px;
+    display: inline-block;
+    color: var(--font_col);
+    font-size: 40px;
+    font-weight: var(--f1_weight);
+}
+#banner .banner_content h1 span{
+    font-weight: var(--f3_weight);
+    font-size: 40px;
+}
+#banner .banner_content p{
+    width: 664px;
+    color: var(--font_col);
+    font-size: 18px;
+    font-weight: var(--f1_weight);
+}
+#banner .banner_content .banner_items{
+    display: block;
+    padding: 40px 0;
+    margin-right: 5px;
+}
+#banner .banner_content .banner_items a{
+    padding: 25px 51px;
+    margin-right: 5px;
+    border: 1px solid var(--font_col);
+    border-radius: 10px;
+    color: var(--font_col);
+    text-transform: uppercase;
+    transition: var(--trans_com);
+}
+#banner .banner_content .banner_items a:hover{
+    color: var(--font_col);
+    background-color: var(--after_hover);
+    border-color: var(--after_hover);
+    box-shadow: 0 2px 0 var(--shadow);
+}
+#banner .banner_content h6{
+    margin-right: 10px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: var(--f1_weight);
+    color: var(--font_col);
+}
+#banner .banner_content .banner_item a i{
+    color: var(--after_hover);
+    margin-right: 10px;
+    width: 52px;
+    height: 52px;
+    background-color: #000;
+    line-height: 52px;
+    text-align: center;
+    border-radius: 50%;
+}
+/* //Banner CSS End// */
+
+/* //About Css Start // */
+#about{
+    background-color: var(--about_bg);
+    border-bottom: 1px solid var(--border_col3);
+}
+#about .container{
+    padding-top: 31px;
+    padding-bottom: 80px;
+}
+#about .row .about_items{
+    width: 25%;
+    padding: 60px 38px;
+}
+#about .container .row .about_items a i{
+    color: var(--font_col);
+    width: 162px;
+    height: 162px;
+    line-height: 162px;
+    background-color: var(--after_hover);
+    border: 4px solid var(--border_col2);
+    border-radius: 50%;
+}
+#about .container .row .about_items h6{
+    margin: 30px 0;
+    font-size: 15px;
+    font-weight: var(--f3_weight);
+    text-transform: uppercase;
+    transition: var(--trans_com);
+}
+#about .container .row .about_items h6:hover{
+    color: var(--after_hover);
+}
+#about .row .about_items p{
+    font: 13px;
+    line-height: 22px;
+    font-weight: 400;
+}
+/* //About Css End// */
+
+/* //Gallery CSS Start// */
+#gallery{
+    padding-bottom: 86px;
+}
+#gallery .gallery_property{
+    padding: 37px 0;
+}
+#gallery .gallery_property h2{
+    font-size: 48px;
+    font-weight: var(--f3_weight);
+}
+#gallery .gallery_property h6{
+    font-size: 20px;
+    font-weight: var(--f1_weight);
+}
+#gallery .gallery_content .gallery_item{
+    width: 25%;
+}
+#gallery .gallery_content .gallery_item .item{
+    display: block;
+    width: 270px;
+    height: 200px;
+    background-color: var(--after_hover);
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+}
+#gallery .gallery_content .gallery_item .text{
+    width: 270px;
+    height: 41px;
+    line-height: 41px;
+    background-color: rgba(65, 64, 66, .65);
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#gallery .gallery_content .gallery_item .text h4{
+    font-size: 15px;
+    font-weight: var(--f3_weight);
+    text-transform: uppercase;
+}
+#gallery .gallery_content .gallery_item p{
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: var(--f2_weight);
+    width: 90%;
+    padding: 24px 0;
+    margin: auto;
+}
+/* //Gallery CSS End// */
+
+/* //Tech CSS Start// */
+#tech{
+    padding: 80px;
+    background: url(../img/Banner-image-00.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 550px;
+}
+#tech .tech_ttl h2{
+    display: block;
+    font-size: 48px;
+    font-weight: var(--f1_weight);
+    color: var(--font_col);
+}
+#tech .tech_ttl span{
+    font-weight: var(--f3_weight);
+}
+#tech .tech_content {
+    width: 670px;
+    margin: auto;
+    padding: 40px;
+}
+#tech .tech_content p{
+    font-size: 18px;
+    font-weight: var(--f2_weight);
+    color: var(--font_col);
+    padding: 12px 0;
+}
+/* //Tech CSS End// */
+
+/* //Price Section CSS Start// */
+#price{
+    padding: 40px 0;
+    border-bottom: 2px solid var(--border_col1);
+}
+#price .price_ttl{
+    padding: 20px 0;
+}
+#price .price_content .price_item{
+    background-color: var(--about_bg);
+    border: 1px solid var(--border_col3);
+    width: calc(30% - 28px);
+    margin: 0 14px;
+    height: 100%;
+    padding-bottom: 30px;
+}
+#price .price_content .package_one h6,
+#price .price_content .package_two h6,
+#price .price_content .package_three h6{
+    font-size: 22px;
+    padding: 20px 0;
+    color: var(--border_col3);
+}
+#price .price_content .package_one h2,
+#price .price_content .package_two h2,
+#price .price_content .package_three h2{
+    font-size: 85px;
+    font-weight: var(--f3_weight);
+    padding: 25px 0;
+    color: var(--font_col);
+}
+#price .price_content .package_two{
+    width: calc(40% - 28px);
+    margin: 0 14px;
+}
+#price .price_content .package_one ul,
+#price .price_content .package_two ul,
+#price .price_content .package_three ul{
+    padding: 32px 0;
+}
+#price .price_content .package_one ul li,
+#price .price_content .package_two ul li,
+#price .price_content .package_three ul li{
+    padding: 13px 0;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: var(--f1_weight);
+    color: var(--border_col1);
+}
+#price .price_content .package_one a,
+#price .price_content .package_two a,
+#price .price_content .package_three a{
+    font-size: 15px;
+    font-weight: var(--f3_weight);
+    padding: 17px 46px;
+    color: var(--font_col);
+    text-transform: uppercase;
+}
+#price .price_content .package_one h2,
+#price .price_content .package_one a{
+    background-color: #91c46b;
+}
+#price .price_content .package_two h2,
+#price .price_content .package_two a{
+    background-color: var(--after_hover);
+}
+#price .price_content .package_three h2,
+#price .price_content .package_three a{
+    background-color: #fd7c00;
+}
+/* //Price Section CSS End// */
+
+/* //Testimonials CSS Start// */
+#test{
+    padding: 35px 0;
+}
+#test .test_item{
+    padding: 15px 0;
+    font-size: 36px;
+    font-weight: var(--f3_weight);
+    text-align: center;
+}
+#test .test_items{
+    padding: 15px 0;
+}
+#test .test_items_alpha{
+    width: 50%;
+    text-align: center;
+}
+#test .test_items_alpha i{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background-color: var(--after_hover);
+    color: var(--font_col);
+    border: 5px solid var(--font_col);
+    border-radius: 20%;
+    box-shadow: 0 2px 0 var(--border_col3);
+    align-items: right;
+    margin-left: 200px;
+}
+#test .test_items_beta{
+    width: 50%;
+}
+#test .test_items_beta p{
+    align-items: right;
+    width: 100%;
+    color: var(--after_hover);
+    font-size: 14px;
+    line-height: 18px;
+}
+/* //Testimonials CSS End// */
+
+/* //Download CSS Start// */
+#download{
+    padding: 25px 0;
+    background-color: var(--footer_bg);
+}
+#download .down_ttl{
+    padding-bottom: 25px;
+}
+#download .down_ttl h3{
+    font-size: 55px;
+    font-weight: var(--f3_weight);
+    color: var(--font_col);
+}
+#download .down_btn{
+    margin-top: 15px;
+}
+#download .down_btn a{
+    padding: 15px 30px;
+    margin-right: 5px;
+    background-color: var(--after_hover);
+    border: 1px solid var(--font_col);
+    border-radius: 10px;
+    color: var(--font_col);
+    text-transform: uppercase;
+}
+/* //Download CSS End// */
+
+/* //Contact CSS Start// */
+#map{
+    width: 100%;
+    height: 681px;
+    position: relative;
+}
+#map .google_map,
+#map .google_map iframe{
+    width: 100%;
+    height: 100%;
+}
+#map .form{
+    position: absolute;
+    background-color: rgba(75, 202, 255, .80);
+    width: 325px;
+    padding: 16px 30px;
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0,  20%);
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#map .form h3 {
+    font-size: 36px;
+    font-weight: var(--f3_weight);
+    color: var(--font_col);
+    padding: 10px 0;
+}
+#map .form input {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+}
+#map .form textarea {
+    resize: none;
+    width: 100%;
+    height: 145px;
+    padding: 13px 0;
+}
+#map .form input, #map .form textarea {
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none;
+    text-transform: uppercase;
+}
+#map .form #submit {
+    background-color: #414042;
+    color: var(--font_col);
+    font-size: 15px;
+    font-weight: var(--f3_weight);
+    margin: 8px 0;
+    box-shadow: 0 3px #313032;
+    cursor: pointer;
+}
+/* //Contact CSS End// */
+
+/* //Footer CSS Start// */
+footer {
+    background-color: var(--footer_bg);
+    padding: 20px;
+    font-size: 20px;
+    color: var(--font_col);
+    margin: auto;
+}
+footer h5 {
+    display: inline-block;
+}
+footer h5 span {
+    color: var(--shadow);
+    font-weight: var(--f3_weight);
+    text-transform: uppercase;
+}
+/* //Footer CSS End// */
+
+/* //Back To top CSS Start// */
+#backToTop{
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 999;
+    background-color: var(--after_hover);
+    border: 3px groove var(--after_hover);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: larger;
+    cursor: pointer;
+    display: none;
+}
+/* //Back To top CSS End// */
